@@ -1,0 +1,48 @@
+# Instalação Angular CLI
+npm install -g @angular/cli@6.0.7
+
+# Criação de novo Projeto
+ng new nome_do_projeto
+
+# Rodar projeto
+ng serve --open
+
+# Instalação rxjs versão que funciona
+npm install rxjs@6.0.0 --save
+
+# Instação Bootstrap
+npm install bootstrap@4.1.1
+
+# Estrutura recomendada
+|-- app
+     |-- modules
+       |-- home
+           |-- [+] components
+           |-- [+] pages
+           |-- home-routing.module.ts
+           |-- home.module.ts
+     |-- core
+       |-- [+] authentication
+       |-- [+] footer
+       |-- [+] guards
+       |-- [+] http
+       |-- [+] interceptors
+       |-- [+] mocks
+       |-- [+] services
+       |-- [+] header
+       |-- core.module.ts
+       |-- ensureModuleLoadedOnceGuard.ts
+       |-- logger.service.ts
+     |
+     |-- shared
+          |-- [+] components
+          |-- [+] directives
+          |-- [+] pipes
+          |-- [+] models
+     |
+     |-- [+] configs
+|-- assets
+     |-- scss
+          |-- [+] partials
+          |-- _base.scss
+          |-- styles.scss

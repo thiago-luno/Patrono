@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+    <div class="row content-login">
+        <div class="left-side"></div>
+    
+        <div class="right-side">
+            <form [formGroup]="loginForm">
+                <div class="flex flex-direction-column">
+                    <h2>PATRONO</h2>
+                    <p>Sistema de Gestão e Monitoramento para Atendimento a Crônicos e Idosos</p>
+                </div>
+                
+                <pto-vmessage 
+
+                    text="Acesso negado! Verifique as credenciais de acesso e tente novamente!">
+                </pto-vmessage>
+                
+                <div class="flex flex-direction-column">
+                    <div class="form-group">
+                        <input #loginInput type="text" formControlName="login" name="login" placeholder="Email" class="form-control" required autofocus/> 
+                        <span
+                            *ngIf="loginForm.controls.login.invalid && loginForm.controls.login.touched" 
+                            class="text-danger d-block mt-2 ml-3">
+                            Nome do usuário é requirido
+                        </span>
+
+                        <br>
+
+                        <input type="password" formControlName="password" name="password" placeholder="Senha" class="form-control" required/> 
+                        <span
+                            *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched" 
+                            class="text-danger d-block d-block mt-2 ml-3">
+                            Senha é requirido
+                        </span>
+
+                        <br>
+                        
+                    </div>
+                    
+                    <button type="submit" class="btn btn-login btn-block" [disabled]="loginForm.invalid" (click)="login()">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
