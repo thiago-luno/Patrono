@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SignInComponent } from './home/signin/signin.component';
 import { MonitorComponent } from './monitor/monitor.component';
+import { AuthGuard } from './core/auth/auth.guard';
 
 const routes: Routes = [
     { 
@@ -12,7 +13,8 @@ const routes: Routes = [
     
     { 
         path: 'monitor',
-        component: MonitorComponent 
+        component: MonitorComponent,
+        canActivate: [ AuthGuard ]
     }, 
 ];
 
