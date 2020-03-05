@@ -16,6 +16,9 @@ npm install bootstrap@4.1.1
 # Instalação jwt decode
 npm install jwt-decode@2.2.0
 
+# Configurando criaç~çao de components para SCSS
+ng config schematics.@schematics/angular:component.styleext scss
+
 # Estrutura recomendada
 |-- app
      |-- modules

@@ -1,0 +1,117 @@
+<nav class="sidebar">
+  <ul class="sidebar__list">
+      <i class="sidebar__icon-menu la la-bars"></i>
+      <li class="sidebar__category">Menu</li>
+
+      <li class="sidebar__item" >
+          <a id="monitoramento" class="sidebar__link">
+              <i class="sidebar__icon-category flaticon-line-graph"></i>
+              <span>Monitoramento</span>
+              <i class="sidebar__icon-arrow la la-angle-right"></i>
+          </a>
+
+          <div class="sidebar__sub-item" >
+              <ul>   
+                  <li class="sidebar__item"> 
+                      <a [routerLink]="['monitoramento']" class="sidebar__link sidebar__link-active-subitem">
+                          <span ><i class="sidebar__icon-mark la la-minus"></i>Dashboard</span>  
+                      </a>
+                  </li>
+          
+                  <li class="sidebar__item">
+                      <a class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i>Cadastro gateway
+                      </a>
+                  </li>
+          
+                  <li class="sidebar__item">
+                      <a class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i>Cadastro relógio
+                      </a>
+                  </li>
+          
+                  <li class="sidebar__item">
+                      <a class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i>Associar Relógio
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </li>
+
+      <li class="sidebar__item">
+          <a id="organização" class="sidebar__link">
+              <i class="sidebar__icon-category flaticon-layers"></i>
+              <span>Organização</span>
+              <i class="sidebar__icon-arrow la la-angle-right"></i>
+          </a>
+      </li>
+
+      <li class="sidebar__item">
+          <a id="controle" class="sidebar__link">
+              <i class="sidebar__icon-category flaticon-user"></i>
+              <span>Controle</span>
+              <i class="sidebar__icon-arrow la la-angle-right"></i>
+          </a>
+
+          <div class="sidebar__sub-item">
+              <ul>   
+                  <li class="sidebar__item"> 
+                      <a [routerLink]="['monitoramento']" class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i> Dashboard
+                          
+                      </a>             
+                  </li>
+          
+                  <li class="sidebar__item">
+                      <a class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i>Cadastro gateway
+                      </a>
+                  </li>
+          
+                  <li class="sidebar__item">
+                      <a class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i>Cadastro relógio
+                      </a>
+                  </li>
+          
+                  <li class="sidebar__item">
+                      <a class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i>Associar Relógio
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </li> 
+      
+      <li class="sidebar__item">
+          <a id="control" class="sidebar__link">
+              <i class="sidebar__icon-category flaticon-edit-1"></i>
+              <span>Cadastros</span>
+              <i class="sidebar__icon-arrow la la-angle-right"></i>
+          </a>
+
+          <div class="sidebar__sub-item">
+              <ul>   
+                  <li class="sidebar__item"> 
+                      <a [routerLink]="['']" class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i> Hóspede       
+                      </a>             
+                  </li>
+
+                  <li class="sidebar__item"> 
+                      <a [routerLink]="['']" class="sidebar__link">
+                          <i class="sidebar__icon-mark la la-minus"></i> Visitante       
+                      </a>             
+                  </li>
+
+                  <li class="sidebar__item"> 
+                      <a [routerLink]="['']">
+                          <i class="sidebar__icon-mark la la-minus"></i> Colaborador       
+                      </a>             
+                  </li>
+              </ul>
+          </div>
+      </li>
+  </ul>  
+</nav>
