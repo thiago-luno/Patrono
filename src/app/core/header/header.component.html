@@ -1,6 +1,6 @@
-<header class="fixed-top" *ngIf="mostrarMenu">
+<header class="fixed-top" *ngIf="router.url !== '/'">
   <nav class="navbar navbar-light bg-white">
-      <a class="navbar-brand">ALURAPIC</a>
+      <a class="navbar-brand">ALURAPIC {{router}}</a>
 
       <div *ngIf="(user$ | async) as user">
           <i class="fa fa-user-circle"></i>

@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { PlatFormDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
+import { UserService } from "src/app/core/user/user.service";
 
 
 @Component({
@@ -20,9 +21,12 @@ export class SignInComponent implements OnInit {
     constructor(
         private formBuilder: FormBuilder,
         private authService: AuthService,
+        private userService: UserService,
         private router: Router,
         private platFormDetectorService: PlatFormDetectorService) {
-       
+
+            if (this.userService.isLogged())
+                this.router.navigate(['/monitor']); 
     }
 
     ngOnInit(): void {

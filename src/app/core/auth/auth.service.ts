@@ -17,8 +17,6 @@ if(document.domain == "tercadaserra.sgmaci.digital" || document.domain == "quint
 })
 
 export class AuthService {
-
-    mostrarMenuEmitter = new EventEmitter<boolean>();
     
     constructor(
         private http: HttpClient,
@@ -36,11 +34,8 @@ export class AuthService {
               res => {
                 const authToken = res.body.data;
                 this.userService.setToken(authToken);
-                this.mostrarMenuEmitter.emit(true);
-                console.log('testre')
             }, err => {
                 console.log('err', err);
-                this.mostrarMenuEmitter.emit(false);
             })       
         )}
 }

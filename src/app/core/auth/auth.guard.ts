@@ -9,21 +9,20 @@ export class AuthGuard implements CanActivate {
 
     constructor(
         private userService: UserService,
-        private router: Router) {
-    }
-
+        private router: Router) { }
+    
     canActivate(
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
 
-        if(this.userService.isLogged()) {
+      
+
+        if(this.userService.isLogged()) {   
             return true;
         }
 
-        this.router.navigate(['']); // segundo parametro do array é se tivesse um rota filha
+        this.router.navigate(['/']); // segundo parametro do array é se tivesse um rota filha
 
         return false;
     }
-
-
 }

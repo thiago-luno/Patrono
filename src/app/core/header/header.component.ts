@@ -13,7 +13,6 @@ import { AuthService } from '../auth/auth.service';
 export class HeaderComponent { 
 
   user$: Observable<User>;
-  mostrarMenu: boolean = false;
    
   constructor(
       private userService: UserService,
@@ -22,16 +21,8 @@ export class HeaderComponent {
      this.user$ = userService.getUser();
   }
 
-  ngOnInit() {
-    this.authService.mostrarMenuEmitter.subscribe(
-      mostrar => {
-        this.mostrarMenu = mostrar
-      })
-  }
-
   logout() {
       this.userService.logout();
-      this.mostrarMenu = false;
       this.router.navigate(['']);
   }
 }
